@@ -51,7 +51,7 @@ app.get('/', async function (req, res) {
        }).then(res=>{
          console.log(res);
        }).catch(err=>{console.log(err)});
-      res.send(JSON.parse(result))
+      res.send(JSON.stringify(result))
 
 });
 
