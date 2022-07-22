@@ -59,8 +59,7 @@ axios.post('https://eai-qa.seat.com',
        }).then(res=>{
          console.log(res);
        }).catch(err=>{console.log(err)});
-           console.log(result.data)
-           res.send(result.data)
+           res.send(result)
 
 });
 
