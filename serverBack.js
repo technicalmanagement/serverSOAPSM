@@ -42,7 +42,7 @@ app.get('/', async function (req, res) {
         `;
 
 
-       const result = await axios.post('http://eai-qa.seat.com',
+       const result = await axios.post('https://eai-qa.seat.com',
        xmls,
        {headers:
          {'Content-Type': 'text/xml',
