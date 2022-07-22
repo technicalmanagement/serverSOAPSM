@@ -57,11 +57,11 @@ app.get('/', async function (req, res) {
          {'Content-Type': 'text/xml',
          'Access-Control-Allow-Headers': 'POST, GET, PUT, DELETE, OPTIONS, HEAD, Authorization, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Access-Control-Allow-Origin',
         'Access-Control-Allow-Origin': '*'}
-       }).then(res=>{
-         console.log(res);
+       }).then(response=>{
+         console.log(response)
+         res.send(response);
        }).catch(err=>{console.log(err)});
        console.log(result)
-      res.send(result)
 
 });
 
