@@ -27,11 +27,11 @@ app.get('/', async function (req, res) {
             }
            }).then(res=>{
              
-             return res
+             return res.response
              
            }).catch(err=>{console.log(err)});
            console.log(result.data)
-           res.send(result.data)
+           res.send(result)
 
 });
 app.get('/new', async function (req, res) {
