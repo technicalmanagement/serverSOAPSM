@@ -26,14 +26,14 @@ app.get('/', async function (req, res) {
              'Content-Type': 'text/xml',
             }
            }).then(res=>{
-             
+             console.log(res.status)
              return res.status
              
-           }).catch(err=>{console.log(err)
-            return err.status
+           }).catch(err=>{console.log(err.response.status)
+            return err.response.status
           });
 
-           res.send(result)
+           res.sendStatus(result)
 
 });
 app.get('/new', async function (req, res) {
@@ -123,10 +123,11 @@ app.get('/new', async function (req, res) {
         'Access-Control-Allow-Origin': '*'}
        }).then(response=>{
          console.log(response)
-         res.send(response);
-       }).catch(err=>{console.log(err)});
+          return response.status
+       }).catch(err=>{console.log(err)
+      return err.status});
        console.log(result)
-       res.send(result)
+       res.sendStatus(result)
 
 });
 
