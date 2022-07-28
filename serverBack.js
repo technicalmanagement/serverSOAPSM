@@ -125,7 +125,7 @@ app.get('/new', async function (req, res) {
          console.log(response)
           return response.status
        }).catch(err=>{console.log(err)
-      return err.status});
+      return err.response.status});
        console.log(result)
        res.sendStatus(result)
 
