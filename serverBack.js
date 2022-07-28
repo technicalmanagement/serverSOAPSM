@@ -27,12 +27,12 @@ app.get('/', async function (req, res) {
             }
            }).then(res=>{
              
-             return res.response.status
+             return res.status
              
            }).catch(err=>{console.log(err)
-            return err.response.status
+            return err.status
           });
-           console.log(result.data)
+
            res.send(result)
 
 });
