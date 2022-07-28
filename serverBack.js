@@ -27,9 +27,11 @@ app.get('/', async function (req, res) {
             }
            }).then(res=>{
              
-             return res.response
+             return res.response.status
              
-           }).catch(err=>{console.log(err)});
+           }).catch(err=>{console.log(err)
+            return err.response.status
+          });
            console.log(result.data)
            res.send(result)
 
