@@ -31,7 +31,7 @@ app.get('/', async function (req, res) {
              
            }).catch(err=>{console.log(err)});
            console.log(result.data)
-           res.send(result)
+           res.send(result.data)
 
 });
 app.get('/new', async function (req, res) {
