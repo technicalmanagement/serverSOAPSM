@@ -23,7 +23,7 @@ app.get('/', async function (req, res) {
            xmls,
            {headers:
              {'Access-Control-Allow-Origin': '*',
-             'Content-Type': 'text/xml',
+             'Content-Type': 'application/soap+xml',
             }
            }).then(res=>{
              console.log(res.status)
