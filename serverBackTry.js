@@ -29,7 +29,9 @@ app.get('/', async function (req, res) {
              console.log(res.status)
              return res.status
              
-           }).catch(err=>{console.log(err.response.status)
+           }).catch(err=>{
+           
+            console.log(err.response.status)
             return err.response.status
           });
 
@@ -125,6 +127,7 @@ app.get('/new', async function (req, res) {
           return response.status
        }).catch(err=>{
         console.log(err)
+        console.log(err.data)
       
         return 'Problems'});
        res.send(result)
