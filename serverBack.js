@@ -115,7 +115,7 @@ app.get('/new', async function (req, res) {
             </soap:Envelope>`
 
 
-       const result = await axios.post('https://eai-qa.seat.com',
+       const result = await axios.post('eai-qa.seat.com',
        xmls,
        {headers:
          {'Content-Type': 'application/soap+xml',
@@ -124,6 +124,7 @@ app.get('/new', async function (req, res) {
          console.log(response)
           return response.status
        }).catch(err=>{console.log(err)
+        console.log(err.data)
       
         return 'Problems'});
        res.send(result)
