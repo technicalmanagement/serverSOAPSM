@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node serverBack.js",
+    "try": "node serverBackTry.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
