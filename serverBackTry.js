@@ -118,7 +118,7 @@ app.get('/new', async function (req, res) {
        const result = await axios.post('https://eai-qa.seat.com',
        xmls,
        {headers:
-         {'Content-Type': 'text/xml',
+         {'Content-Type': 'application/soap+xml',
         'Access-Control-Allow-Origin': '*'}
        }).then(response=>{
          console.log(response)
